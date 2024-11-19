@@ -1,0 +1,137 @@
+@import url('menu.css');
+@import url('home.css');
+@import url('testimonials.css');
+@import url('footer.css');
+@import url('styles.css');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Montserrat', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+section {
+    padding: 28px 8%;
+}
+
+header {
+    width: 100%;
+    padding: 16px 8%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 3;
+}
+
+#navbar{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_logo {
+    font-size: 24px;
+    color: white;
+    font-family: 'black 900';
+}
+
+
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+}
+
+.nav-item a:hover{
+    color: #1d1d1d;
+    border-bottom: 2px solid #f80e0e;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f80e0e;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+    
+}
+
+.btn-default:hover {
+    background-color:#b61c1c;
+}
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width:1170px) {
+    #nav_list,
+    #navbar .btn-default{
+        display:none;        
+    }
+
+    #mobile_btn {
+        display:block;
+        background-color: #f80e0e;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: 12px;
+        border: 2px solid #f80e0e;
+        padding: 10px 10px;
+    }
+
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+
+    }
+}
+
+.section-title {
+    color: #f80e0e;
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    color: white;
+    font-size: 2.1875rem;
+} 
